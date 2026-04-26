@@ -1,34 +1,141 @@
 * {
-    box-sizing: border-box;
-   
+  box-sizing: border-box;
 }
 
 body {
-   background-color:  gray;
-    margin: 0;
-    padding: 15px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  background-color: gray;
 }
-.userCard {
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: -20px;
-    text-align: center;
-    
-  }
-.userImg {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: solid 1px  white;
-    object-fit: cover;
 
+.allUserSettings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 30px;
 }
+
+.userItem {
+  flex: 1 1 460px;
+  min-width: 320px;
+  max-width: 575px;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  min-height: 245px;
+  height: 100%;
+  padding: 28px;
+  gap: 32px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.userImg {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+.userContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 0;
+}
+
+.userText {
+  text-align: left;
+}
+
+.userText h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #222222;
+}
+
+.userText h2 strong {
+  font-weight: 700;
+}
+
+.userText p {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #666666;
+}
+
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  gap: 6px;
+}
+
+.cardActions button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 3px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.cardActions button:hover {
+  background-color: #0069d9;
+}
+
 .cardFooter {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  gap: 16px;
+  font-size: 14px;
+  color: #ff6347;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 12px;
+  }
+
+  .allUserSettings {
+    gap: 18px;
+  }
+
+  .userItem {
+    min-width: 0;
+    flex-basis: 100%;
+  }
+
+  .userCard {
     flex-direction: column;
-    
+    align-items: center;
+    padding: 22px;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .userContent {
+    align-items: center;
+  }
+
+  .userText {
+    text-align: center;
+  }
 }
