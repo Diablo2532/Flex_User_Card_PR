@@ -109,33 +109,3 @@ body {
   color: #ff6347;
 }
 
-@media (max-width: 520px) {
-  body {
-    padding: 12px;
-  }
-
-  .allUserSettings {
-    gap: 18px;
-  }
-
-  .userItem {
-    min-width: 0;
-    flex-basis: 100%;
-  }
-
-  .userCard {
-    flex-direction: column;
-    align-items: center;
-    padding: 22px;
-    gap: 18px;
-    text-align: center;
-  }
-
-  .userContent {
-    align-items: center;
-  }
-
-  .userText {
-    text-align: center;
-  }
-}
